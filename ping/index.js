@@ -12,3 +12,8 @@ service.on('API_ping', (req, cb) => {
 		cb({response: 'pong', params: req, binlist: binlist });
 	});
 });
+
+service.on('API_hello', (req, cb) => {
+	console.log('API_hello was receive a request with params: %j', req);
+	cb({response: 'world', params: req});
+});

@@ -13,8 +13,12 @@ run() {
     RETVAL=$?
 }
 
-check() {
+ping() {
     curl -i http://localhost:8080/api/ping
+}
+
+hello() {
+    curl -i http://localhost:8080/api/hello
 }
 
 case "$1" in
@@ -24,11 +28,14 @@ case "$1" in
   run)
     run
     ;;
-  check)
-    check
+  ping)
+    ping
+    ;;
+  hello)
+    hello
     ;;
   *)
-    echo "Usage: {build|run|check}"
+    echo "Usage: {build|run|ping|hello}"
     exit 1
     ;;
 esac
