@@ -9,7 +9,7 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
-const client = new cote.Requester({name: 'API'});
+const client = new cote.Requester({name: 'api', key: 'api'});
 
 app.all('/api/:method', (req, resp) => {
 console.log(`${req.params.method} was requested with params: %j`, req.query);

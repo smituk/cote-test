@@ -2,8 +2,8 @@
 
 const cote = require('cote');
 
-const service = new cote.Responder({ name: 'Pinger' });
-const client = new cote.Requester({name: 'Pinger client'});
+const service = new cote.Responder({ name: 'ping', key: 'api' });
+const client = new cote.Requester({name: 'ping.req', key: 'binlist'});
 
 service.on('API_ping', (req, cb) => {
 	console.log('API_ping was receive a request with params: %j', req);

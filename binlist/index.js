@@ -3,7 +3,7 @@
 const cote = require('cote');
 const request = require('request');
 
-const service = new cote.Responder({ name: 'Binlist' });
+const service = new cote.Responder({ name: 'Binlist', key: 'binlist' });
 
 service.on('GATE_binlist', (req, cb) => {
 	console.log('GATE_binlist was receive a request with params: %j', req);
